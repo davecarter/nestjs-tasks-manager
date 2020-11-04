@@ -1,5 +1,5 @@
 import { TaskStatus } from '../tasks.model';
-import { IsEnum, IsOptional }  from 'class-validator'
+import { IsEnum, IsNotEmpty, IsOptional }  from 'class-validator'
 
 export class GetTasksFilterDto {
     @IsOptional()
@@ -9,5 +9,6 @@ export class GetTasksFilterDto {
     status: TaskStatus
 
     @IsOptional()
+    @IsNotEmpty()
     search: string
 }
