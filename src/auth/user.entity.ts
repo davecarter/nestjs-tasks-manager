@@ -1,6 +1,13 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import {
+  Entity,
+  BaseEntity,
+  PrimaryGeneratedColumn,
+  Column,
+  Unique
+} from 'typeorm'
 
 @Entity()
+@Unique(['username']) // Makes username unique at database validation level
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number
@@ -10,4 +17,7 @@ export class User extends BaseEntity {
 
   @Column()
   password: string
+
+  @Column()
+  salt: string
 }
