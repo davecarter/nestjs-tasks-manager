@@ -6,7 +6,7 @@
 
 Task Manager exercise build with NestJS with:
 
-- Get, Post, Delete and Patch endpoints to add, create delete and update tasks.
+- Get, Post, Delete and Patch endpoints to list, create delete and update tasks.
 - Postgre data persistance
 - Authentication using hashed passwords and JSON Web Tokens
 
